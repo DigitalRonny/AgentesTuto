@@ -1,5 +1,7 @@
+import jade.core.AID;
 import jade.core.Agent;
-import jade.core.behaviours.Behaviour;;
+import jade.core.behaviours.Behaviour;
+import jade.lang.acl.*;
 
 public class Agente1 extends Agent{
     
@@ -8,18 +10,16 @@ public class Agente1 extends Agent{
         addBehaviour(new Comportamiento());    
     }
 
-    public class Comportamiento extends Behaviour{
+    public class Comportamiento extends Behaviour{//comportamiento simple
 
         @Override
         public void action() {
-            for (int i = 0; i < 10; i++) {
-                System.out.println("Contador en: "+ i);
-            }
+
         }
 
         @Override
         public boolean done() {
-            System.out.println("FIN");
-            return true;        } 
+            return true;        
+        } 
     }
 }
