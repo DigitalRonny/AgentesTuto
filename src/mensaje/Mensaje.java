@@ -1,3 +1,4 @@
+package mensaje;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.logging.Level;

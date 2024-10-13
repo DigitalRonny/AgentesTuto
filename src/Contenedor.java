@@ -2,6 +2,11 @@ import jade.core.ProfileImpl;
 import jade.core.Profile;
 import jade.wrapper.AgentContainer;
 import jade.wrapper.StaleProxyException;
+import mensaje.Agente1;
+import mensaje.Agente2;
+import mensaje.Agente3;
+import mensaje.Agente4;
+import mensaje.Agente5;
 
 public final class Contenedor {
     private static AgentContainer agentContainer;
@@ -14,7 +19,11 @@ public final class Contenedor {
 
     public static void agregarAgentes(){
         try {
-            agentContainer.createNewAgent("Peter", Agente1.class.getName(), null).start();;
+            agentContainer.createNewAgent("Ag1", Agente1.class.getName(), null).start();
+            agentContainer.createNewAgent("Ag2", Agente2.class.getName(), null).start();
+            agentContainer.createNewAgent("Ag3", Agente3.class.getName(), null).start();
+            agentContainer.createNewAgent("Ag4", Agente4.class.getName(), null).start();
+            agentContainer.createNewAgent("Ag5", Agente5.class.getName(), null).start();
         } catch (StaleProxyException e) {
             e.printStackTrace();
         }
