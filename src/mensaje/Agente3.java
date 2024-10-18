@@ -33,8 +33,7 @@ public class Agente3 extends Agent{
             
             //block(10000); // Espera 10 segundos antes de enviar un nuevo mensaje
 
-            //doDelete();
+            doDelete();
         }       
     }
-    
 }

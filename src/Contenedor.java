@@ -26,6 +26,7 @@ public final class Contenedor {
             agentContainer.createNewAgent("Ag5", Agente5.class.getName(), null).start();
         } catch (StaleProxyException e) {
             e.printStackTrace();
+        
         }
     }
 }

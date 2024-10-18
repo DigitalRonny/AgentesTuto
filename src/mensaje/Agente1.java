@@ -19,6 +19,8 @@ public class Agente1 extends Agent{
             //enviar el mensaje a Agente2 por medio de la clase mensaje
             Mensaje.send_msj(ACLMessage.INFORM, "Ag2", getAgent(), "cod-1-2", null, new Persona("Ronny", "Cartagena", 21));
         
+            //Enviar mensaje a Agente4
+            Mensaje.send_msj(ACLMessage.INFORM, "Ag4", getAgent(), "cod-1-4", null, new Persona("Paula", "Chasipanta", 18));
 
             //RECIBIR MENSAJE DE AGENTE5
             ACLMessage aclMSJ = blockingReceive();//se espera el mensaje con blokingReceive
@@ -36,10 +38,9 @@ public class Agente1 extends Agent{
             }
 
             
-            //si todos los agentes tienen el doDelete solo se ejecutará un ciclo
-            //doDelete();
-        }
-
+            //si (casi) todos los agentes tienen el doDelete solo se ejecutará un ciclo
+            //si todos no tienen el doDelete se hara un ciclo de mensajes infinito
+            doDelete();
+        }     
     }
-    
 }

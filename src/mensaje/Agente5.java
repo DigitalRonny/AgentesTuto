@@ -31,7 +31,7 @@ public class Agente5 extends Agent{
             //ENVIAR MENSAJE AL AGENTE1
             Mensaje.send_msj(ACLMessage.INFORM, "Ag1", getAgent(), "cod-1-5", null, new Persona("Gabo", "Vasconezzz", 21));
 
-            //doDelete();
+            doDelete();
         }
     };
 }
